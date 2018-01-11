@@ -36,6 +36,11 @@ class ViewController: UIViewController {
 		
 		print(firstNumber.text) //optional w/o !
 		print(secondNumber.text!) //removes "optional:" before number in console
+		//these are strings, not int or double
+		
+		TheLabel.text = "Answer: \(Double(firstNumber.text!)! + Double(secondNumber.text!)!)" //When the button is tapped, the two fields will be combined
+		
+		
 	}
 
 
