@@ -15,19 +15,29 @@ class ViewController: UIViewController {
 	
 	var tapCount = 0
 	
-	@IBAction func buttonTapped(_ sender: Any) {
-		
+	/* @IBAction func buttonTapped(_ sender: Any) {
+	
+	// Every time we push the button, it keeps track and adds it.
+	
 		tapCount = tapCount + 1
 		
 		if tapCount >= 20 {
 			TheLabel.text = "You tapped the button 20 times!"
 		}
+	} */
+	
+	
+	//Outlets accept text input from user
+	@IBOutlet weak var firstNumber: UITextField!
+	
+	@IBOutlet weak var secondNumber: UITextField!
+	
+	@IBAction func buttonTapped(_ sender: Any) {
+		
+		print(firstNumber.text) //optional w/o !
+		print(secondNumber.text!) //removes "optional:" before number in console
 	}
-	
-	// Every time we push the button, it keeps track and adds it.
-	
-	
-	
+
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
