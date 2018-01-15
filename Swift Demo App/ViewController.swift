@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	
 	
 	@IBOutlet weak var TheLabel: UILabel!
 	
@@ -19,11 +19,11 @@ class ViewController: UIViewController {
 	
 	// Every time we push the button, it keeps track and adds it.
 	
-		tapCount = tapCount + 1
-		
-		if tapCount >= 20 {
-			TheLabel.text = "You tapped the button 20 times!"
-		}
+	tapCount = tapCount + 1
+	
+	if tapCount >= 20 {
+	TheLabel.text = "You tapped the button 20 times!"
+	}
 	} */
 	
 	
@@ -34,27 +34,31 @@ class ViewController: UIViewController {
 	
 	@IBAction func buttonTapped(_ sender: Any) {
 		
-		print(firstNumber.text) //optional w/o !
-		print(secondNumber.text!) //removes "optional:" before number in console
-		//these are strings, not int or double
 		
-		TheLabel.text = "Answer: \(Double(firstNumber.text!)! + Double(secondNumber.text!)!)" //When the button is tapped, the two fields will be combined
+		let addition = false
+		
+		if addition {
+			TheLabel.text = "Answer: \(Double(firstNumber.text!)! + Double(secondNumber.text!)!)" //When the button is tapped, the two fields will be combined
+		} else {
+			TheLabel.text = "Answer: \(Double(firstNumber.text!)! - Double(secondNumber.text!)!)" //When the button is tapped, the two fields will be subtracted
+		}
+		
 		
 		
 	}
-
-
+	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		
 	}
-
+	
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-
-
+	
+	
 }
 
